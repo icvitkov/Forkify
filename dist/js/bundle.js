@@ -81,16 +81,11 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-<<<<<<< HEAD
 /******/ 	return __webpack_require__(__webpack_require__.s = 0);
-=======
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/js/index.js");
->>>>>>> test
 /******/ })
 /************************************************************************/
 /******/ ({
 
-<<<<<<< HEAD
 /***/ "./node_modules/babel-polyfill/lib/index.js":
 /*!**************************************************!*\
   !*** ./node_modules/babel-polyfill/lib/index.js ***!
@@ -3843,25 +3838,15 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 
 /***/ }),
 
-=======
->>>>>>> test
 /***/ "./src/js/index.js":
 /*!*************************!*\
   !*** ./src/js/index.js ***!
   \*************************/
-<<<<<<< HEAD
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 eval("\n\nvar _test = __webpack_require__(/*! ./test */ \"./src/js/test.js\");\n\nvar _test2 = _interopRequireDefault(_test);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar x = 23; // Global app controller\n\nconsole.log('I imported ' + _test2.default + ' from another module called test.js. Variable x is ' + x);\n\n//# sourceURL=webpack:///./src/js/index.js?");
-=======
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _test__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./test */ \"./src/js/test.js\");\n// Global app controller\r\n\r\n\r\nconsole.log(`I imoported ${_test__WEBPACK_IMPORTED_MODULE_0__[\"default\"]} from another module test.js`);\r\n\n\n//# sourceURL=webpack:///./src/js/index.js?");
->>>>>>> test
 
 /***/ }),
 
@@ -3869,7 +3854,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _tes
 /*!************************!*\
   !*** ./src/js/test.js ***!
   \************************/
-<<<<<<< HEAD
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3886,13 +3870,6 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("__webpack_require__(/*! babel-polyfill */\"./node_modules/babel-polyfill/lib/index.js\");\nmodule.exports = __webpack_require__(/*! ./src/js/index.js */\"./src/js/index.js\");\n\n\n//# sourceURL=webpack:///multi_babel-polyfill_./src/js/index.js?");
-=======
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nconsole.log('Imported module');\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (199);\n\n//# sourceURL=webpack:///./src/js/test.js?");
->>>>>>> test
 
 /***/ })
 

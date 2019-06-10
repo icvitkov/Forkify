@@ -1,2 +1,2 @@
-# Forkify
-ES2015 project
+# Webpack-and-babel-settings
+organized repository; babel and webpack; bundle

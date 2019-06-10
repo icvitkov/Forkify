@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "forkify",
   "version": "1.0.0",
   "description": "forkify project",
@@ -31,34 +30,4 @@
   "dependencies": {
     "babel-polyfill": "^6.26.0"
   }
-=======
-    "name": "forkify",
-    "version": "1.0.0",
-    "description": "forkify project",
-    "main": "index.js",
-    "scripts": {
-        "dev": "webpack --mode development",
-        "build": "webpack --mode production",
-        "start": "webpack-dev-server --mode development --open"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/icvitkov/Forkify.git"
-    },
-    "author": "Ivana Cvitković",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/icvitkov/Forkify/issues"
-    },
-    "homepage": "https://github.com/icvitkov/Forkify#readme",
-    "devDependencies": {
-        "@babel/core": "^7.4.5",
-        "@babel/preset-env": "^7.4.5",
-        "babel-loader": "^8.0.6",
-        "html-webpack-plugin": "^3.2.0",
-        "webpack": "^4.32.2",
-        "webpack-cli": "^3.3.2",
-        "webpack-dev-server": "^3.7.1"
-    }
->>>>>>> test
 }
