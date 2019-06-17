@@ -1,3 +1,4 @@
+//lecture 140
 import axios from 'axios';
 export default class Search {
     constructor(query) {
