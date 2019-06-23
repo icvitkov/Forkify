@@ -26,10 +26,33 @@ export default class Recipe {
   calcTime() {
     //za svaka 3 sastojka treba 15 min
     const numIng = this.ingredients.length;
-    const periods = Math.ceil( numIng / 3);
+    const periods = Math.ceil(numIng / 3);
     this.time = periods * 15;
   }
   calcServings() {
     this.servings = 4;
+  }
+
+  parseIngredients() {
+    const unitsLong = ['tablespoons', 'tablespoon', 'ounces', 'ounce', 'teaspoons', 'teaspoon', 'cups', 'pounds'];
+    const unitsShort = ['tbsp', 'tbsp', 'oz', 'oz', 'tsp', 'tsp', 'cup', 'pound'];
+
+    const newIngredients = this.ingredients.map(el => {
+      // 1. uniform units
+      let ingredient = el.toLowerCase();
+      unitsLong.forEach((unit, i) => {
+        ingredient = ingredient.replace(unit, unitsShort[i]);
+      });
+
+      // 2. remove parentheses
+      ingredient = ingredient.replace(/ *\([^)]*\) */g, ' ');
+
+      return ingredient;
+
+    });
+
+    this.ingredients = newIngredients;
+
+
   }
 }
