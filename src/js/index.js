@@ -22,7 +22,7 @@ const state = {};
 const controlSearch = async () => {
     //1. Get query from view
     const query = searchView.getInput();
-    
+
     if (query) {
         // 2. New search object and add to state
         state.search = new Search(query);
@@ -35,7 +35,7 @@ const controlSearch = async () => {
         try {
             // 4. Search for recipes
             await state.search.getResults();
-    
+
             //5. render result on UI
             clearLoader();
             searchView.renderResults(state.search.result);
@@ -76,9 +76,12 @@ const controlRecipe = async () => {
         recipeView.clearRecipe();
         renderLoader(elements.recipe);
 
+        //highlight selected search item
+        if (state.search) searchView.highlightSelected(id);
+
         //create new recipe object
         state.recipe = new Recipe(id);
-        
+
 
         try {
 
@@ -91,8 +94,8 @@ const controlRecipe = async () => {
             state.recipe.calcServings();
 
             //render recipe
-           clearLoader();
-           recipeView.renderRecipe(state.recipe);
+            clearLoader();
+            recipeView.renderRecipe(state.recipe);
         } catch (err) {
             alert('Error processing recipe!');
         }
