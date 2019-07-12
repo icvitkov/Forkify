@@ -159,17 +159,20 @@ const controlLike = () => {
     );
     //toggle the like button
     likesView.toggleLikeBtn(true);
+
     //add like to UI list
-    console.log(state.likes);
+    likesView.renderLike(newLike);
+
     //** user has liked current recipe
   } else {
     // remove like from the state
     state.likes.deleteLike(currentID);
+
     // toggle the like button
     likesView.toggleLikeBtn(false);
 
     // remove from UI list
-    console.log(state.likes);
+    likesView.deleteLike(currentID);
   }
   likesView.toggleLikeMenu(state.likes.getNumLikes());
 };
