@@ -12,11 +12,11 @@ export const clearResults = () => {
 export const highlightSelected = id => {
   const resultsArr = Array.from(document.querySelectorAll(".results__link"));
   resultsArr.forEach(el => {
-    el.classList.remove(".results__link--active");
+    el.classList.remove("results__link--active");
   });
   document
-    .querySelector(`.results__link[href="#${id}"]`)
-    .classList.add(".results__link--active");
+    .querySelector(`.results__link[href*="${id}"]`)
+    .classList.add("results__link--active");
 };
 
 export const limitRecipeTitle = (title, limit = 17) => {
@@ -44,9 +44,7 @@ const renderRecipe = recipe => {
   }">
                         </figure>
                         <div class="results__data">
-                            <h4 class="results__name">${limitRecipeTitle(
-                              recipe.title
-                            )}</h4>
+                            <h4 class="results__name">${limitRecipeTitle(recipe.title)}</h4>
                             <p class="results__author">${recipe.publisher}r</p>
                         </div>
                     </a>
